@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccv4namkq63qh"]
+
+[ext_resource type="Texture2D" uid="uid://c5jxgbuwbq00o" path="res://images/muralla china 1 fondo.jpg" id="1_4mwws"]
+
+[node name="fons" type="StaticBody2D"]
+
+[node name="textura2" type="Sprite2D" parent="."]
+position = Vector2(3.50006, 0)
+scale = Vector2(8.83142, 3.385)
+texture = ExtResource("1_4mwws")

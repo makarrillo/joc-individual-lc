@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cii62my3dylm8"]
+
+[ext_resource type="Script" uid="uid://b452y1xxtgs3e" path="res://murallitas.gd" id="1_ayl78"]
+[ext_resource type="Texture2D" uid="uid://g8gh27ot1j3u" path="res://images/muralla china 1 objeto.png" id="1_uso2i"]
+
+[node name="murallitas" type="StaticBody2D"]
+script = ExtResource("1_ayl78")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 7)
+polygon = PackedVector2Array(-322, 56, -318, 148, 286, 146, 291, 54, 203, 54, 209, 72, 17, 72, 24, 55, -65, 54, -61, 71, -239, 71, -234, 56)
+one_way_collision_margin = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-17, 93)
+texture = ExtResource("1_uso2i")

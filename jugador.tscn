@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6wme3g7f6agy"]
+
+[ext_resource type="Texture2D" uid="uid://ccqraptur8d1x" path="res://monillo 1.3.png" id="1_16k11"]
+[ext_resource type="Script" uid="uid://kfx75n3qroil" path="res://jugador.gd" id="1_omvyu"]
+[ext_resource type="Texture2D" uid="uid://n6o20eah5m4h" path="res://monillo 1.3 izq.png" id="3_8o684"]
+[ext_resource type="Texture2D" uid="uid://d4ngq4o7u654q" path="res://monillo 1.1.png" id="4_ukil5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukil5"]
+radius = 125.0
+height = 320.0
+
+[node name="jugador" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_omvyu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_ukil5")
+
+[node name="izquierda" type="Sprite2D" parent="."]
+texture = ExtResource("3_8o684")
+
+[node name="derecha" type="Sprite2D" parent="."]
+texture = ExtResource("1_16k11")
+
+[node name="quieto" type="Sprite2D" parent="."]
+rotation = -0.345575
+texture = ExtResource("4_ukil5")

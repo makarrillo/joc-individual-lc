@@ -1,0 +1,159 @@
+[gd_scene load_steps=14 format=3 uid="uid://qjrianojyk4v"]
+
+[ext_resource type="PackedScene" uid="uid://b6wme3g7f6agy" path="res://jugador.tscn" id="1_otx2n"]
+[ext_resource type="Script" uid="uid://chcojhkcexah7" path="res://joc.gd" id="1_pmlj6"]
+[ext_resource type="PackedScene" uid="uid://ccv4namkq63qh" path="res://fons.tscn" id="2_3g1jo"]
+[ext_resource type="PackedScene" uid="uid://cii62my3dylm8" path="res://murallitas.tscn" id="3_3g1jo"]
+[ext_resource type="PackedScene" uid="uid://c57chi0ffd5q1" path="res://murallita_torre.tscn" id="4_82cgd"]
+[ext_resource type="PackedScene" uid="uid://b78fdt1ete2h3" path="res://murallita_simple.tscn" id="5_18lud"]
+[ext_resource type="Texture2D" uid="uid://bm28ckf7bymum" path="res://images/enremes.png" id="5_kttaj"]
+[ext_resource type="PackedScene" uid="uid://chd70mvx2o8h2" path="res://dp_area.tscn" id="8_si4dn"]
+[ext_resource type="PackedScene" uid="uid://cchghmkniojs" path="res://pasar_a_pt_3.tscn" id="9_odd86"]
+[ext_resource type="Script" uid="uid://ced8e5fy5eahf" path="res://area_2d.gd" id="10_8oj32"]
+[ext_resource type="Texture2D" uid="uid://da2nnptvp7a1r" path="res://monillo 1.2.png" id="10_ijwtn"]
+[ext_resource type="Script" uid="uid://5r3gywxkhfhn" path="res://sprite_2d.gd" id="11_8oj32"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_odd86"]
+radius = 52.1728
+
+[node name="joc ind" type="Node2D"]
+script = ExtResource("1_pmlj6")
+
+[node name="fons" parent="." instance=ExtResource("2_3g1jo")]
+position = Vector2(1146, 316)
+
+[node name="jugador" parent="." instance=ExtResource("1_otx2n")]
+position = Vector2(107, 489)
+
+[node name="pt 1" type="Node2D" parent="."]
+
+[node name="murallitas" parent="pt 1" instance=ExtResource("3_3g1jo")]
+position = Vector2(58, 498)
+
+[node name="murallitas2" parent="pt 1" instance=ExtResource("3_3g1jo")]
+position = Vector2(1171, 503)
+
+[node name="murallita torre" parent="pt 1" instance=ExtResource("4_82cgd")]
+position = Vector2(563, 379)
+
+[node name="Enremes" type="Sprite2D" parent="pt 1/murallita torre"]
+position = Vector2(4, 163)
+rotation = 3.14159
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes4" type="Sprite2D" parent="pt 1/murallita torre"]
+position = Vector2(0, 223)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes5" type="Sprite2D" parent="pt 1/murallita torre"]
+position = Vector2(3, 283)
+rotation = 3.14159
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes2" type="Sprite2D" parent="pt 1/murallita torre"]
+position = Vector2(3, 54)
+rotation = 3.15032
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes3" type="Sprite2D" parent="pt 1/murallita torre"]
+position = Vector2(1, 106)
+texture = ExtResource("5_kttaj")
+
+[node name="murallita simple" parent="pt 1" instance=ExtResource("5_18lud")]
+position = Vector2(848, 429)
+
+[node name="murallita simple2" parent="pt 1" instance=ExtResource("5_18lud")]
+position = Vector2(326, 427)
+
+[node name="pt 2" type="Node2D" parent="."]
+
+[node name="murallitas" parent="pt 2" instance=ExtResource("3_3g1jo")]
+position = Vector2(2319, 496)
+
+[node name="DJ area" parent="pt 2" instance=ExtResource("8_si4dn")]
+position = Vector2(1289, 318)
+
+[node name="murallitas3" parent="pt 2" instance=ExtResource("3_3g1jo")]
+position = Vector2(2916, 496)
+
+[node name="murallitas5" parent="pt 2" instance=ExtResource("3_3g1jo")]
+position = Vector2(2916, 496)
+
+[node name="murallitas4" parent="pt 2" instance=ExtResource("3_3g1jo")]
+position = Vector2(3513, 496)
+
+[node name="pasar a pt 3" parent="pt 2" instance=ExtResource("9_odd86")]
+position = Vector2(1129, 166)
+
+[node name="pt 3" type="Node2D" parent="."]
+
+[node name="murallita torre6" parent="pt 3" instance=ExtResource("4_82cgd")]
+position = Vector2(2893, 299)
+
+[node name="murallita torre7" parent="pt 3/murallita torre6" instance=ExtResource("4_82cgd")]
+position = Vector2(1, 60)
+
+[node name="murallitas" parent="pt 3/murallita torre6" instance=ExtResource("3_3g1jo")]
+position = Vector2(21, 27)
+
+[node name="murallita torre5" parent="pt 3/murallita torre6" instance=ExtResource("4_82cgd")]
+position = Vector2(339, 118)
+
+[node name="murallita torre2" parent="pt 3/murallita torre6" instance=ExtResource("4_82cgd")]
+position = Vector2(-334, 117)
+
+[node name="Enremes5" type="Sprite2D" parent="pt 3/murallita torre6"]
+position = Vector2(0, 228)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes" type="Sprite2D" parent="pt 3/murallita torre6"]
+position = Vector2(-334, 229)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes2" type="Sprite2D" parent="pt 3/murallita torre6/Enremes"]
+position = Vector2(77, 0)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes3" type="Sprite2D" parent="pt 3/murallita torre6"]
+position = Vector2(342, 230)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes4" type="Sprite2D" parent="pt 3/murallita torre6/Enremes3"]
+position = Vector2(-77, 0)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes6" type="Sprite2D" parent="pt 3/murallita torre6"]
+position = Vector2(-1, 169)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes2" type="Sprite2D" parent="pt 3/murallita torre6"]
+position = Vector2(-336, 172)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes2" type="Sprite2D" parent="pt 3/murallita torre6/Enremes2"]
+position = Vector2(78, 3)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes4" type="Sprite2D" parent="pt 3/murallita torre6"]
+position = Vector2(342, 172)
+texture = ExtResource("5_kttaj")
+
+[node name="Enremes4" type="Sprite2D" parent="pt 3/murallita torre6/Enremes4"]
+position = Vector2(-77, 0)
+texture = ExtResource("5_kttaj")
+
+[node name="Area2D" type="Area2D" parent="pt 3"]
+script = ExtResource("10_8oj32")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pt 3/Area2D"]
+position = Vector2(2894, 210)
+shape = SubResource("CircleShape2D_odd86")
+
+[node name="Sprite2D" type="Sprite2D" parent="pt 3/Area2D"]
+position = Vector2(2898, 212)
+rotation = 3.14159
+scale = Vector2(0.405363, 0.32235)
+texture = ExtResource("10_ijwtn")
+script = ExtResource("11_8oj32")
+
+[connection signal="body_entered" from="pt 3/Area2D" to="pt 3/Area2D" method="_on_body_entered"]

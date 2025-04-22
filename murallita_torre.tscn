@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c57chi0ffd5q1"]
+
+[ext_resource type="Texture2D" uid="uid://dcapf6mc8d1wu" path="res://images/muralla china 1 torre sola.png" id="1_qlwe1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlwe1"]
+size = Vector2(87, 83)
+
+[node name="murallita torre" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 11.5)
+shape = SubResource("RectangleShape2D_qlwe1")
+
+[node name="MurallaChina1TorreSola" type="Sprite2D" parent="."]
+texture = ExtResource("1_qlwe1")

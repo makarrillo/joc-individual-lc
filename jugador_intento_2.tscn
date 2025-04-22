@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://5v50wf7ioex1"]
+
+[ext_resource type="Script" uid="uid://deprpgj4kabdh" path="res://jugador_intento_2.gd" id="1_x7pix"]
+[ext_resource type="Texture2D" uid="uid://ccqraptur8d1x" path="res://monillo 1.3.png" id="2_src21"]
+[ext_resource type="Texture2D" uid="uid://d4ngq4o7u654q" path="res://monillo 1.1.png" id="3_6lmvh"]
+[ext_resource type="Texture2D" uid="uid://n6o20eah5m4h" path="res://monillo 1.3 izq.png" id="4_i0r8b"]
+
+[node name="jugador intento2" type="CharacterBody2D"]
+script = ExtResource("1_x7pix")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-113.333, 166.667, 116.667, 166.667, 150, -30, 130, -146.667, -123.333, -146.667, -150, -33.3333)
+
+[node name="derecha" type="Sprite2D" parent="."]
+texture = ExtResource("2_src21")
+
+[node name="quieto" type="Sprite2D" parent="."]
+rotation = -0.345575
+texture = ExtResource("3_6lmvh")
+
+[node name="izquierda" type="Sprite2D" parent="."]
+texture = ExtResource("4_i0r8b")
